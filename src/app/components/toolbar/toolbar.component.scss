@@ -14,6 +14,26 @@ mat-toolbar {
     }
 }
 
+span:hover {
+    cursor: pointer;
+}
+
+:host ::ng-deep .mat-slide-toggle-bar {
+    background: #a7b4ba;
+}
+
+// :host ::ng-deep .mat-slide-toggle-thumb {
+//     background: red;
+// }
+
+// :host ::ng-deep.mat-checked .mat-slide-toggle-bar {
+//     background: red;
+// }
+
+// :host ::ng-deep.mat-checked .mat-slide-toggle-thumb {
+//     background: red;
+// }
+
 @media screen and (max-width: 599px) {}
 
 @media screen and (max-width: 959px) {
