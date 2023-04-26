@@ -1,22 +1,22 @@
 <mat-toolbar color="primary">
     <span><strong>Freelancer</strong> portfolio</span>
     <div>
-        <span routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</span>
-        <span routerLink="projects" routerLinkActive="active">Projects</span>
-        <span routerLink="skills" routerLinkActive="active">Skills</span>
-        <span routerLink="contacts" routerLinkActive="active">Contacts</span>
+        <span routerLink="" routerLinkActive="color-accent" [routerLinkActiveOptions]="{exact: true}">Home</span>
+        <span routerLink="projects" routerLinkActive="color-accent">Projects</span>
+        <span routerLink="skills" routerLinkActive="color-accent">Skills</span>
+        <span routerLink="contacts" routerLinkActive="color-accent">Contacts</span>
     </div>
-    <mat-slide-toggle color="accent"></mat-slide-toggle>
+    <mat-slide-toggle class="slide" color="accent"></mat-slide-toggle>
     <div>
         <button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu>
-            <button routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+            <button routerLink="" routerLinkActive="color-accent" [routerLinkActiveOptions]="{exact: true}"
                 mat-menu-item>Home</button>
-            <button routerLink="/projects" routerLinkActive="active" mat-menu-item>Projects</button>
-            <button routerLink="skills" routerLinkActive="active" mat-menu-item>Skills</button>
-            <button routerLink="contacts" routerLinkActive="active" mat-menu-item>Contacts</button>
+            <button routerLink="/projects" routerLinkActive="color-accent" mat-menu-item>Projects</button>
+            <button routerLink="skills" routerLinkActive="color-accent" mat-menu-item>Skills</button>
+            <button routerLink="contacts" routerLinkActive="color-accent" mat-menu-item>Contacts</button>
         </mat-menu>
     </div>
 </mat-toolbar>
