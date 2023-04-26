@@ -14,4 +14,8 @@
 mat-toolbar {
     position: fixed;
     bottom: 0;
+
+    mat-toolbar-row a {
+        display: flex;
+    }
 }
