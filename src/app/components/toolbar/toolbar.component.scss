@@ -1,0 +1,33 @@
+mat-toolbar {
+    display: grid;
+    grid-template: 1fr/ 1fr repeat(2, auto);
+    gap: 0 20px;
+
+    div:nth-child(4) {
+        display: none;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 0 20px;
+    }
+}
+
+@media screen and (max-width: 599px) {}
+
+@media screen and (max-width: 959px) {
+    mat-toolbar {
+        div:nth-child(2) {
+            display: none;
+        }
+
+        div:nth-child(4) {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {}
+
+@media screen and (max-width: 1919px) {}
