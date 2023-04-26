@@ -9,12 +9,12 @@
     flex: 1;
 }
 
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
 html,
 body {
     height: 100%;
+    margin: 0;
+}
+
+.active {
+    color: #ff4081;
 }
