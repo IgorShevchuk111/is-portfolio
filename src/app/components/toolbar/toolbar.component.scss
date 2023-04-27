@@ -1,3 +1,4 @@
+// Menu
 mat-toolbar {
     display: grid;
     grid-template: 1fr/ 1fr repeat(2, auto);
@@ -14,26 +15,33 @@ mat-toolbar {
     }
 }
 
+// Mat-Slide-Toggle
+mat-icon {
+    margin: -2px;
+}
+
+:host ::ng-deep .mat-slide-toggle-bar {
+    background: #282727
+}
+
+:host ::ng-deep .mat-slide-toggle-thumb {
+    background: #000;
+}
+
+:host ::ng-deep.mat-checked .mat-slide-toggle-bar {
+    background: #282727
+}
+
+:host ::ng-deep.mat-checked .mat-slide-toggle-thumb {
+    background: #000;
+}
+
+// Cursor
 span:hover {
     cursor: pointer;
 }
 
-:host ::ng-deep .mat-slide-toggle-bar {
-    background: #a7b4ba;
-}
-
-// :host ::ng-deep .mat-slide-toggle-thumb {
-//     background: red;
-// }
-
-// :host ::ng-deep.mat-checked .mat-slide-toggle-bar {
-//     background: red;
-// }
-
-// :host ::ng-deep.mat-checked .mat-slide-toggle-thumb {
-//     background: red;
-// }
-
+// Media
 @media screen and (max-width: 599px) {}
 
 @media screen and (max-width: 959px) {
