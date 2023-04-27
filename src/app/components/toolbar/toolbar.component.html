@@ -6,10 +6,11 @@
         <span routerLink="skills" routerLinkActive="color-accent">Skills</span>
         <span routerLink="contacts" routerLinkActive="color-accent">Contacts</span>
     </div>
-    <mat-slide-toggle class="slide" color="accent"></mat-slide-toggle>
+    <mat-slide-toggle class="slide" color="accent" #darkModeSwitch (change)="changeTheme()" [checked]="checked"
+        [disabled]="disabled"></mat-slide-toggle>
     <div>
         <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
+            <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu>
             <button routerLink="" routerLinkActive="color-accent" [routerLinkActiveOptions]="{exact: true}"
