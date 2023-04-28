@@ -32,6 +32,13 @@ export class ToolbarComponent implements AfterViewInit {
   changeTheme() {
     this.checked = !this.checked;
     this.setIcon();
+    if (this.checked) {
+      document.body.classList.remove('light-theme');
+      document.body.classList.add('dark-theme');
+    } else {
+      document.body.classList.remove('dark-them');
+      document.body.classList.add('light-theme');
+    }
   }
 
 }

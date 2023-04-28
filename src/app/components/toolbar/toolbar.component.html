@@ -12,7 +12,7 @@
         <button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
-        <mat-menu #menu>
+        <mat-menu #menu [ngClass]="{'dark-theme': checked, 'light-theme': !checked}">
             <button routerLink="" routerLinkActive="color-accent" [routerLinkActiveOptions]="{exact: true}"
                 mat-menu-item>Home</button>
             <button routerLink="/projects" routerLinkActive="color-accent" mat-menu-item>Projects</button>

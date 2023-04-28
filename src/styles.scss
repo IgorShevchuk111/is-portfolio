@@ -1,12 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 
 $my-typography: mat.define-typography-config($font-family: 'Comfortaa');
 
@@ -74,7 +66,6 @@ $primary-palette: (
     )
 );
 
-
 $red-palette: (
     50 : #fce6e5,
     100 : #f8c0be,
@@ -101,36 +92,57 @@ $red-palette: (
 
 @include mat.core($my-typography);
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 $my-primary: mat.define-palette($primary-palette, A200);
 $my-accent: mat.define-palette($accent-palette, 300);
-
-// The warn palette is optional (defaults to red).
 $my-warn: mat.define-palette($red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$my-theme: mat.define-light-theme((color: (primary: $my-primary,
+$dark-theme: mat.define-light-theme((color: (primary: $my-primary,
                 accent: $my-accent,
                 warn: $my-warn,
             )));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($my-theme);
+@include mat.all-component-themes($dark-theme);
 @include mat.typography-hierarchy($my-typography);
 
-/* You can add global styles to this file, and also import other style files */
 .color-accent {
-    color: map-get($accent-palette, 500) !important;
+    color: map-get($accent-palette, 300) !important;
 }
 
 .color-warn {
     color: map-get($red-palette, 200) !important;
 }
+
+// Dark Theme Class
+.dark-theme {
+    background: map-get($primary-palette, A200);
+    color: map-get($primary-palette, 50);
+
+    .mat-menu-content {
+        background: map-get($primary-palette, A200);
+        color: map-get($primary-palette, 50);
+    }
+
+    .mat-menu-item {
+        color: map-get($primary-palette, 50);
+    }
+}
+
+// Light Theme Class
+.light-theme {
+    background: map-get($primary-palette, 50);
+    color: map-get($primary-palette, A200);
+
+    .mat-menu-content {
+        background: map-get($primary-palette, 50);
+        color: map-get($primary-palette, A200);
+    }
+
+    .mat-menu-item {
+        color: map-get($primary-palette, A200);
+    }
+}
+
+
 
 html,
 body {
