@@ -1,17 +1,21 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements AfterViewInit {
-  constructor(private renderer: Renderer2) { }
-
-  @ViewChild('darkModeSwitch', { read: ElementRef }) element: ElementRef | undefined;
 
   checked = false;
   disabled = false;
+
+
+  @ViewChild('darkModeSwitch', { read: ElementRef }) element: ElementRef | undefined;
+
+  constructor(
+    private renderer: Renderer2
+  ) { }
+
   // Mat-slide-toggle
   ngAfterViewInit() {
     this.setIcon();
@@ -33,11 +37,9 @@ export class ToolbarComponent implements AfterViewInit {
     this.checked = !this.checked;
     this.setIcon();
     if (this.checked) {
-      document.body.classList.remove('light-theme');
-      document.body.classList.add('dark-theme');
+      this.renderer.addClass(document.body, 'dark-theme');
     } else {
-      document.body.classList.remove('dark-them');
-      document.body.classList.add('light-theme');
+      this.renderer.removeClass(document.body, 'dark-theme');
     }
   }
 
