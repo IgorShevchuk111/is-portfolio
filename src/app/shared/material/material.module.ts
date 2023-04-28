@@ -58,8 +58,6 @@ const modules = [
   MatTableModule,
   MatPaginatorModule,
   MatDividerModule
-
-
 ];
 
 @NgModule({

@@ -90,7 +90,7 @@ $red-palette: (
     )
 );
 
-@include mat.core($my-typography);
+@include mat.core();
 
 $my-primary: mat.define-palette($primary-palette, A200);
 $my-accent: mat.define-palette($accent-palette, 300);
