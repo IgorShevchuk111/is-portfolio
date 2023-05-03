@@ -5,3 +5,9 @@
     text-align: center;
     padding: 50px;
 }
+
+@media screen and (max-width: 959px) {
+    .container {
+        padding: 50px 10px;
+    }
+}
