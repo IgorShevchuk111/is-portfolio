@@ -196,3 +196,17 @@ a {
 .spacer {
     flex: 1;
 }
+
+@media screen and (max-width: 959px) {
+    .level-1 {
+        font-size: 32px;
+    }
+
+    .level-2 {
+        font-size: 24px;
+    }
+
+    .level-3 {
+        font-size: 16px;
+    }
+}
