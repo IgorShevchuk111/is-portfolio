@@ -11,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { SkillsPageComponent } from './skills-page/skills-page.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,13 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
